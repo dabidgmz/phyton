@@ -1,5 +1,4 @@
 from funciones import Funcione
-
 class Sala:
     def __init__(self, nombre, capacidad, sistema_digital, tp_pantalla, tp_sala):
         self.nombre = nombre
