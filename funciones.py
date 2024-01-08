@@ -11,9 +11,9 @@ class Funcione:
 
 if __name__ == "__main__":
     Funciones1 = Funcione("dora", "17:00", "drake", "español", "180")
-    #print(Funciones1)
-    #print("Nombre:", Funciones1.nombre)
-    #print("Hora:", Funciones1.hora)
-    #print("Director:", Funciones1.director)
-    #print("Idioma:", Funciones1.idioma)
-    #print("Duracion:", Funciones1.duracion)
+    print(Funciones1)
+    print("Nombre:", Funciones1.nombre)
+    print("Hora:", Funciones1.hora)
+    print("Director:", Funciones1.director)
+    print("Idioma:", Funciones1.idioma)
+    print("Duracion:", Funciones1.duracion)

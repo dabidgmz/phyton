@@ -1,3 +1,4 @@
+from funciones import Funcione
 from salas import Sala
 
 class Cine:
@@ -8,21 +9,25 @@ class Cine:
         self.direccion = direccion
         self.empresa = empresa
         self.salas = []
-
+    def agregar_sala(self, sala):
+        self.salas.append(sala)
     def __str__(self):
-        return f"Cine: {self.nombre}, Colonia: {self.colonia}, Numero: {self.numero}, Direccion: {self.direccion}, Empresa: {self.empresa}"
+        cine_info = f"Cine: {self.nombre}, Colonia: {self.colonia}, Numero: {self.numero}, Direccion: {self.direccion}, Empresa: {self.empresa}"
+        salas_info = "\n".join([str(sala) for sala in self.salas])
+        return cine_info + "\n" + salas_info
 
 if __name__ == "__main__":
     Cine1 = Cine("cinecity", "centro", "60", "aves", "cinemex")
-    #print(Cine1)
-    #print("Nombre:", Cine1.nombre)
-    #print("Colonia:", Cine1.colonia)
-    #print("Numero:", Cine1.numero)
-    #print("Direccion:", Cine1.direccion)
-    #print("Empresa:", Cine1.empresa)
-    #sala1 = Sala("Sala 1", 100, "Digital", "Pantalla tipo A", "Sala VIP")
-    #sala2 = Sala("Sala 2", 150, "Análogo", "Pantalla tipo B", "Sala Estándar")
-    #Cine1.salas.append(sala1)
-    #Cine1.salas.append(sala2)
-    #for sala in Cine1.salas:
-    #   print(f"Sala: {sala.nombre}, Capacidad: {sala.capacidad}, Sistema Digital: {sala.sistema_digital}, Tipo de Pantalla: {sala.tp_pantalla}, Tipo de Sala: {sala.tp_sala}")
+    sala1 = Sala("Sala1", 100, "Digital", "Pantalla tipo A", "Sala VIP")
+    sala2 = Sala("Sala2", 150, "Análogo", "Pantalla tipo B", "Sala Estándar")
+    funcion1_sala1 = Funcione("dora", "17:00", "drake", "español", "180")
+    funcion2_sala1 = Funcione("peliculaX", "20:00", "directorX", "inglés", "150")
+    funcion1_sala2 = Funcione("aventura", "18:30", "directorY", "español", "120")
+    sala1.agregar_funcion(funcion1_sala1)
+    sala1.agregar_funcion(funcion2_sala1)
+    sala2.agregar_funcion(funcion1_sala2)
+    Cine1.agregar_sala(sala1)
+    Cine1.agregar_sala(sala2)
+    print("\nSalas con Funciones:")
+    for sala in Cine1.salas:
+        print(sala)
