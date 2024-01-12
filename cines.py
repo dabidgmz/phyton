@@ -1,21 +1,21 @@
-from salas import Sala
 from arreglo import Arreglo
+from salas import Sala
 from funciones import Funcione
-
 class Cine(Arreglo):
-    def __init__(self, nombre, colonia, numero, direccion, empresa):
+    def __init__(self, nombre=None, colonia=None, numero=None, direccion=None, empresa=None):
         super().__init__()
         self.nombre = nombre
         self.colonia = colonia
         self.numero = numero
         self.direccion = direccion
         self.empresa = empresa
-        self.salas = Arreglo() 
+        self.salas = Sala()
 
     def __str__(self):
         cine_info = f"Cine: {self.nombre}, Colonia: {self.colonia}, Numero: {self.numero}, Direccion: {self.direccion}, Empresa: {self.empresa}"
         salas_info = "\n".join([str(sala) for sala in self.mostrar()])
         return cine_info + "\n" + salas_info
+
 
 if __name__ == "__main__":
     cine = Cine("CineCity", "Downtown", 1, "123 Main St", "CineCorp")

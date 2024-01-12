@@ -1,13 +1,13 @@
-from arreglo import Arreglo
 from funciones import Funcione
+
 class Sala:
-    def __init__(self, nombre, capacidad, sistema_digital, tp_pantalla, tp_sala):
+    def __init__(self, nombre=None, capacidad=None, sistema_digital=None, tp_pantalla=None, tp_sala=None):
         self.nombre = nombre
         self.capacidad = capacidad
         self.sistema_digital = sistema_digital
         self.tp_pantalla = tp_pantalla
         self.tp_sala = tp_sala
-        self.funciones = Arreglo()
+        self.funciones = Funcione()
 
     def agregar_funcion(self, funcion):
         self.funciones.agregar(funcion)
