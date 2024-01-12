@@ -1,5 +1,4 @@
 from arreglo import Arreglo
-
 class Funcione(Arreglo):
     def __init__(self, nombre, hora, director, idioma, duracion):
         super().__init__()

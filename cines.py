@@ -1,31 +1,27 @@
 from salas import Sala
 from arreglo import Arreglo
+from funciones import Funcione
 
 class Cine(Arreglo):
     def __init__(self, nombre, colonia, numero, direccion, empresa):
-        super().__init__()  
+        super().__init__()
         self.nombre = nombre
         self.colonia = colonia
         self.numero = numero
         self.direccion = direccion
         self.empresa = empresa
 
-    def agregar_sala(self, sala):
-        self.agregar(sala)
-
-    def mostrar_salas(self):
-        return self.mostrar()
-
-    def ver_sala(self, indice):
-        return self.ver(indice)
-
-    def modificar_sala(self, indice, nueva_sala):
-        return self.modificar(indice, nueva_sala)
-
-    def eliminar_sala(self, indice):
-        return self.eliminar(indice)
-
     def __str__(self):
         cine_info = f"Cine: {self.nombre}, Colonia: {self.colonia}, Numero: {self.numero}, Direccion: {self.direccion}, Empresa: {self.empresa}"
-        salas_info = "\n".join([str(sala) for sala in self.mostrar_salas()])
+        salas_info = "\n".join([str(sala) for sala in self.mostrar()])
         return cine_info + "\n" + salas_info
+
+if __name__ == "__main__":
+    cine = Cine("CineCity", "Downtown", 1, "123 Main St", "CineCorp")
+    sala1 = Sala("Sala 1", 100, "Digital", "2D", "Normal")
+    sala1.agregar_funcion(Funcione("Pelicula 1", "18:00", "Director 1", "Español", "120 mins"))
+    sala2 = Sala("Sala 2", 80, "Digital", "3D", "VIP")
+    sala2.agregar_funcion(Funcione("Pelicula 2", "20:30", "Director 2", "Inglés", "150 mins"))
+    cine.agregar(sala1)
+    cine.agregar(sala2)
+    print(cine)
