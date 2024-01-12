@@ -1,7 +1,7 @@
 from arreglo import Arreglo
 
 class Funcione(Arreglo):
-    def __init__(self,nombre=None, hora=None, director=None, idioma=None, duracion=None):
+    def __init__(self, nombre=None, hora=None, director=None, idioma=None, duracion=None):
         super().__init__()
         self.nombre = nombre
         self.hora = hora

@@ -1,5 +1,5 @@
 from funciones import Funcione
-
+from arreglo import Arreglo
 class Sala:
     def __init__(self, nombre=None, capacidad=None, sistema_digital=None, tp_pantalla=None, tp_sala=None):
         self.nombre = nombre
