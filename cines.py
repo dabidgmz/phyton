@@ -10,6 +10,7 @@ class Cine(Arreglo):
         self.numero = numero
         self.direccion = direccion
         self.empresa = empresa
+        self.salas = Arreglo() 
 
     def __str__(self):
         cine_info = f"Cine: {self.nombre}, Colonia: {self.colonia}, Numero: {self.numero}, Direccion: {self.direccion}, Empresa: {self.empresa}"
