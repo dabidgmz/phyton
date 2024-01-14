@@ -14,3 +14,6 @@ class Funcione(Arreglo):
             return f"Funciones: Nombre={self.nombre}, Hora={self.hora}, Director={self.director}, Idioma={self.idioma}, Duracion={self.duracion}\nEste es un arreglo de funciones vacío."
         else:
             return f"Este es un arreglo de funciones y sus elementos: {self.elementos}"
+
+    def a_diccionario(self):
+        return {"nombre": self.nombre, "hora": self.hora, "director": self.director, "idioma": self.idioma, "duracion": self.duracion}

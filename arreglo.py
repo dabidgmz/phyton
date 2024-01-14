@@ -32,3 +32,6 @@ class Arreglo:
             return True
         else:
             return False
+
+    def a_diccionario(self):
+        return {"elementos": [elemento.a_diccionario() for elemento in self.elementos]}
