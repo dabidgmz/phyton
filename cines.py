@@ -21,7 +21,6 @@ class Cine(Arreglo):
     def a_diccionario(self):
         return {"nombre": self.nombre, "colonia": self.colonia, "numero": self.numero, "direccion": self.direccion, "empresa": self.empresa, "salas": [sala.a_diccionario() for sala in self.mostrar()]}
 
-
 if __name__ == "__main__":
     cine = Cine("CineCity", "Downtown", 1, "123 Main St", "CineCorp")
     sala1 = Sala("Sala 1", 100, "Digital", "2D", "Normal")
