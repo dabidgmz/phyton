@@ -1,4 +1,3 @@
-from arreglo import Arreglo
 from funciones import Funcione
 
 class Sala:

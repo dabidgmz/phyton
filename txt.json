@@ -1,0 +1,40 @@
+{
+    "elementos": [],
+    "nombre": "CineCity",
+    "colonia": "Downtown",
+    "numero": 1,
+    "direccion": "123 Main St",
+    "empresa": "CineCorp",
+    "salas": {
+        "elementos": [
+            {
+                "nombre": "Sala 1",
+                "capacidad": 100,
+                "sistema_digital": "Digital",
+                "tp_pantalla": "2D",
+                "tp_sala": "Normal",
+                "funciones": {
+                    "nombre": null,
+                    "hora": null,
+                    "director": null,
+                    "idioma": null,
+                    "duracion": null
+                }
+            },
+            {
+                "nombre": "Sala 2",
+                "capacidad": 80,
+                "sistema_digital": "Digital",
+                "tp_pantalla": "3D",
+                "tp_sala": "VIP",
+                "funciones": {
+                    "nombre": null,
+                    "hora": null,
+                    "director": null,
+                    "idioma": null,
+                    "duracion": null
+                }
+            }
+        ]
+    }
+}

@@ -1,4 +1,5 @@
-# arreglo.py
+import json
+
 class Arreglo:
     def __init__(self):
         self.elementos = []
