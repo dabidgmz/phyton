@@ -29,6 +29,6 @@ if __name__ == "__main__":
     sala2.agregar_funcion(Funcione("Pelicula 2", "20:30", "Director 2", "Inglés", "150 mins"))
     cine.agregar(sala1)
     cine.agregar(sala2)
-
+    print("mugre del toror no explica bien")
     diccionario_cine = cine.a_diccionario()
     print(diccionario_cine)
