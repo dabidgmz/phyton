@@ -20,12 +20,16 @@ class Cine(Arreglo):
         cine_dict = {k: v.a_diccionario() if k == 'salas' else v for k, v in vars(self).items()}
         cine_dict['salas'] = self.salas.a_diccionario()
         return cine_dict
+    
+    def guardar_json(self, nombre_archivo):  
+        diccionario_cine = self.to_dict()
+        with open(nombre_archivo, 'w') as archivo:
+            json.dump(diccionario_cine, archivo, indent=4)
 
     def __str__(self):
         cine_info = f"Cine: {self.nombre}, Colonia: {self.colonia}, Numero: {self.numero}, Direccion: {self.direccion}, Empresa: {self.empresa}"
         salas_info = "\n".join([str(sala) for sala in self.salas.mostrar()])
         return cine_info + "\n" + salas_info
-
 if __name__ == "__main__":
     cine = Cine("CineCity", "Downtown", 1, "123 Main St", "CineCorp")
     sala1 = Sala("Sala 1", 100, "Digital", "2D", "Normal")
@@ -34,10 +38,8 @@ if __name__ == "__main__":
     sala2.agregar_funcion(Funcione("Pelicula 2", "20:30", "Director 2", "Inglés", "150 mins"))
     cine.agregar_sala(sala1)
     cine.agregar_sala(sala2)
-
-    diccionario_cine = cine.to_dict()
-
-    with open('txt.json', 'w') as archivo:
-        json.dump(diccionario_cine, archivo, indent=4)
-
+    
+    diccionario_cine = cine.to_dict()  
     print(diccionario_cine)
+    
+    cine.guardar_json('txt.json')

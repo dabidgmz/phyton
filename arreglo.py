@@ -1,5 +1,5 @@
+# arreglo.py
 import json
-
 class Arreglo:
     def __init__(self):
         self.elementos = []
@@ -33,6 +33,11 @@ class Arreglo:
             return True
         else:
             return False
-
+    
     def a_diccionario(self):
         return {"elementos": [elemento.a_diccionario() for elemento in self.elementos]}
+
+    def guardar_json(self, nombre_archivo):
+        diccionario = self.a_diccionario()
+        with open(nombre_archivo, 'w') as archivo:
+            json.dump(diccionario, archivo, indent=4)

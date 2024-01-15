@@ -1,4 +1,4 @@
-# funciones.py
+
 from arreglo import Arreglo
 
 class Funcione(Arreglo):
